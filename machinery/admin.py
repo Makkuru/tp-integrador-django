@@ -1,0 +1,1 @@
+"""Registro administrativo de maquinaria."""

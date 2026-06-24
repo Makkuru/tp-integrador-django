@@ -1,0 +1,1 @@
+"""Repositories de materias primas."""
