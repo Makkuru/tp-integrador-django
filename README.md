@@ -1,54 +1,23 @@
-# Trabajo Practico Integrador - ERP de Produccion y Manufactura
+# Trabajo Práctico – Sistema de Gestión de Inventario y Depósitos
 
-**Alumno:** Emanuel Uria
+## Grupo 2
 
-## Descripcion
+**Integrantes:**
 
-API REST construida con Django para gestionar procesos de produccion y manufactura. El sistema usa una arquitectura backend por capas y responde siempre en formato JSON mediante `JsonResponse`.
+* Thomas Solda
+* Lucas Olivares
+* Emanuel Uria
 
-## Arquitectura
+## Descripción del Proyecto
 
-Cada app respeta la separacion:
+El presente trabajo práctico tiene como objetivo el diseño y desarrollo de un Sistema de Gestión de Inventario y Depósitos orientado a optimizar el control y la administración de productos almacenados. La aplicación permitirá registrar y consultar información relacionada con el stock disponible, así como gestionar los movimientos de mercadería entre distintos depósitos.
 
-- `controllers`: recibe HTTP, llama al service y devuelve JSON.
-- `services`: concentra reglas de negocio y excepciones de dominio.
-- `repositories`: administra datos en memoria con listas Python.
-- `models`: clases Python puras del dominio.
-- `dto`: define los campos expuestos al cliente.
-- `validators`: valida datos de entrada.
-- `exceptions`: errores de dominio con `message` y `status_code`.
+El sistema buscará proporcionar una solución eficiente para el seguimiento de inventarios, facilitando la actualización de existencias y contribuyendo a una mejor organización de los recursos dentro de una organización.
 
-## Modulos
+## Tecnologías
 
-- `production_orders`: ordenes de produccion.
-- `raw_materials`: materias primas y alertas de stock minimo.
-- `machinery`: maquinaria y estados operativos.
-- `operators`: operarios activos e inactivos.
-- `production_lines`: lineas de produccion con validacion de maquinaria.
+El desarrollo del proyecto se realizará utilizando **Django** como framework principal, aprovechando sus herramientas para la construcción de aplicaciones web seguras, escalables y mantenibles. Asimismo, se emplearán las tecnologías complementarias necesarias para la implementación de la interfaz de usuario, la persistencia de datos y la gestión del sistema.
 
-## Endpoints principales
+## Objetivo General
 
-- `GET /production-orders/`
-- `POST /production-orders/create/`
-- `GET /production-orders/<id>/`
-- `PATCH /production-orders/<id>/status/`
-- `GET /raw-materials/`
-- `POST /raw-materials/create/`
-- `PATCH /raw-materials/<id>/stock/`
-- `GET /machinery/`
-- `PATCH /machinery/<id>/status/`
-- `GET /operators/`
-- `POST /operators/create/`
-- `POST /operators/<id>/activate/`
-- `POST /operators/<id>/deactivate/`
-- `GET /production-lines/`
-- `POST /production-lines/<id>/activate/`
-- `POST /production-lines/<id>/deactivate/`
-
-## Ejecucion
-
-```bash
-pip install -r requirements.txt
-python manage.py test
-python manage.py runserver
-```
+Desarrollar una aplicación web que permita administrar inventarios y depósitos de manera centralizada, garantizando la integridad de la información y facilitando la gestión de stock y movimientos de productos.
