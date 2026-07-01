@@ -75,6 +75,22 @@ El proyecto expone las siguientes rutas principales para interactuar con la API 
 
 ## Cómo inicializar el proyecto
 
+### Con Docker
+
+1. Construir y levantar los contenedores:
+   ```bash
+   docker compose up --build
+   ```
+
+2. La aplicación quedará disponible en `http://localhost:8000/`.
+
+3. Para detener los contenedores:
+   ```bash
+   docker compose down
+   ```
+
+### Sin Docker
+
 1. Crear y activar un entorno virtual:
    ```bash
    python -m venv venv

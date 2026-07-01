@@ -1,0 +1,15 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tp-integrador-django
+    ports:
+      - "8000:8000"
+    environment:
+      SECRET_KEY: 'django-insecure-2%h2jaa$osyxpe)lz)r^oln_c5bq@x_gxxccchnqyzwa7a4__r'
+      DEBUG: "True"
+      ALLOWED_HOSTS: localhost,127.0.0.1,0.0.0.0
+    volumes:
+      - .:/app
+    restart: unless-stopped

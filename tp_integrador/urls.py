@@ -30,10 +30,10 @@ def home_view(request):
     <html>
       <head>
         <meta charset="utf-8">
-        <title>TP Integrador - Home</title>
+        <title>TP Integrador Grupo- Home</title>
       </head>
       <body>
-        <h1>TP Integrador</h1>
+        <h1>TP Integrador Grupo 2</h1>
         <p>Rutas disponibles:</p>
         <ul>
           <li><a href="/admin/">Administrador de Django</a></li>
